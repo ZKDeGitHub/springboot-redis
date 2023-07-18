@@ -1,9 +1,14 @@
 package com.javasm.entity;
 
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.io.Serializable;
 
 /**
  * @Author: zk
@@ -14,8 +19,10 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Student {
-    private int id;
-    private String name;
+@TableName("tb_student")
+public class Student implements Serializable {
+    @TableId(type = IdType.ASSIGN_ID)
+    private Integer id;
+    private String sname;
 
 }
