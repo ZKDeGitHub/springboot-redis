@@ -45,12 +45,12 @@ public class StudentServiceImpl extends ServiceImpl<StudentMapper, Student> impl
 
    /**
     *
-    * @param entity
+    * @param student
     * @return
     */
    @Override
    @CacheEvict(value = "student", key = "#student.id")
-   public boolean updateById(Student entity) {
-      return super.updateById(entity);
+   public boolean updateById(Student student) {
+      return super.updateById(student);
    }
 }
