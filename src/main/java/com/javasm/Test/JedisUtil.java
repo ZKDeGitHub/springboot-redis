@@ -1,6 +1,8 @@
 package com.javasm.Test;
 
 
+
+
 /**
  * @Author: zk
  * @since: 11
@@ -9,15 +11,13 @@ package com.javasm.Test;
  */
 
 public class JedisUtil {
-/*
-   private static JedisPool jedisPool;
-*/
+//   private static JedisPool jedisPool;
 
 /*   static {
       JedisPoolConfig jedisPoolConfig = new JedisPoolConfig();
       jedisPoolConfig.setMaxTotal(50);
       jedisPoolConfig.setMaxIdle(10);
-      jedisPool = new JedisPool(jedisPoolConfig,"localhost",6379);
+      jedisPool = new JedisPool(jedisPoolConfig, "localhost", 6379);
    }*/
 
    /**
@@ -29,7 +29,7 @@ public class JedisUtil {
       return resource;
    }*/
 
-   /**
+   /**d
     * 关闭连接池
     * @param jedis
     */
