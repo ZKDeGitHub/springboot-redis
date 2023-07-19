@@ -44,6 +44,9 @@ public class StudentServiceImpl extends ServiceImpl<StudentMapper, Student> impl
    }
 
    /**
+    * 修改数据库中内容时，同时删除该条内容在redis中的缓存
+    *@CacheEvict(value = "student", key = "#student.id")
+    * key值为形参的对象名.id
     *
     * @param student
     * @return

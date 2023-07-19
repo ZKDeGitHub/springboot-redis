@@ -7,7 +7,7 @@ spring:
 #数据源配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/test_db?serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=Asia/Shanghai
     username: root
     password: 123456
     type: com.alibaba.druid.pool.DruidDataSource
@@ -19,8 +19,8 @@ logging:
 app:
   token:
 #    私钥
-    privateKey: c4jXfB6fC8etyW+iL2OScA0A06D0kArlskjCY9YSt7M=
+    privateKey: DvNRuK6C+h1P/1LVjU9mZG+pywIGrnuLUR43KRi8b9Q=
 #    过期时间
-    expireTime: 2
+    expireTime: 15
 server:
   port: 8080
