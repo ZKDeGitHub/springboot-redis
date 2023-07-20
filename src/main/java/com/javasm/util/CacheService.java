@@ -34,15 +34,16 @@ public class CacheService {
       return (String) o;
    }
 
-   public void  set(String s, String redisToken, Integer i, TimeUnit minutes){
+   public void  set(String user_token, String redisToken, Integer i, TimeUnit minutes){
+      
       // redis中的token未过期时，延长时间
       if(redisToken == null){
-         redisTemplate.expire(s,i,minutes);
-
-
-
-
+         redisTemplate.expire(user_token,i,minutes);
       }
+
+      // 正常的设置过期时间
+      ValueOperations valueOperations = redisTemplate.opsForValue();
+      valueOperations.set(user_token,redisToken,i,minutes);
 
    }
 }

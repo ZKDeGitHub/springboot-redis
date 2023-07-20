@@ -70,6 +70,7 @@ public class LoginInterceptor implements HandlerInterceptor {
             response.setHeader("user_token",token);
         }
         // 前面的校验都通过了，每次请求都将redis中的token过期时间延长，延长的值为设置的token过期时长
+        // 注意redis中的token有效期要设置比token的有效期长一些
         cacheService.set(CacheService.TOKEN_CACHE_NAME + user_token,redisToken,expireTime + 1, TimeUnit.MINUTES);
         return true;
     }
