@@ -20,6 +20,9 @@ import java.util.Map;
 
 public class JwtUtil {
 
+   // token过期时的异常
+   public static final String EXPIREDJWTEXCEPTION = "ExpiredJwtException";
+
    private static String keyVal = "DvNRuK6C+h1P/1LVjU9mZG+pywIGrnuLUR43KRi8b9Q=";
 
    public static void main(String[] args) {

@@ -49,6 +49,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         return user;
     }
 
+    /**
+     * 获取token
+     * @param user
+     * @return
+     */
     @Override
     public String getToken(User user) {
         String token = JwtUtil.getToken(user.getUserName(), appProperties.getPrivateKey(), appProperties.getExpireTime());
